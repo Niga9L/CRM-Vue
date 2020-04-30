@@ -52,14 +52,14 @@
               </div>
 
               <div class="input-field">
-                <input type="text" id="name2">
+                <input type="text" id="name">
                 <label for="name">Название</label>
                 <span class="helper-text invalid">TITLE</span>
               </div>
 
               <div class="input-field">
                 <input
-                    id="limit2"
+                    id="limit"
                     type="number"
                 >
                 <label for="limit">Лимит</label>
@@ -77,11 +77,3 @@
     </section>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style scoped>
-
-</style>
