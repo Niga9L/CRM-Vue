@@ -28,8 +28,8 @@ export default {
       return user ? user.uid : null
     },
     async logout({commit}) {
-      await firebase.auth().signOut();
-      commit('clearInfo');
+      await firebase.auth().signOut()
+      commit('clearInfo')
     }
   }
 }

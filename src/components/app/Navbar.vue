@@ -47,15 +47,15 @@ export default {
     interval: null,
     dropdown: null,
   }),
-  computed:{
-    name(){
-      return this.$store.getters.info.name
-    }
-  },
   methods: {
     async logout() {
       await this.$store.dispatch('logout')
-      await this.$router.push('/login?message=logout')
+      this.$router.push('/login?message=logout')
+    }
+  },
+  computed: {
+    name() {
+      return this.$store.getters.info.name
     }
   },
   mounted() {
