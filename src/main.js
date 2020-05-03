@@ -5,6 +5,7 @@ import router from './router/index'
 import store from './store'
 import dateFilter from '@/filters/date.filter'
 import currencyFilter from '@/filters/currency.filter'
+import localizeFilter from '../src/filters/localize.filter'
 import messagePlugin from '@/utils/message.plugin'
 import Loader from '@/components/app/Loader'
 import Paginate from 'vuejs-paginate'
@@ -23,6 +24,7 @@ Vue.use(Vuelidate)
 Vue.filter('date', dateFilter)
 Vue.directive('tooltip', tooltipDirectives)
 Vue.filter('currency', currencyFilter)
+Vue.filter('localize', localizeFilter)
 Vue.component('Loader', Loader)
 Vue.component('Paginate', Paginate)
 
