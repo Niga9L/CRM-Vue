@@ -3,10 +3,12 @@ import Vuelidate from 'vuelidate'
 import App from './App.vue'
 import router from './router/index'
 import store from './store'
+import VueMeta from 'vue-meta'
 import dateFilter from '@/filters/date.filter'
 import currencyFilter from '@/filters/currency.filter'
 import localizeFilter from '../src/filters/localize.filter'
 import messagePlugin from '@/utils/message.plugin'
+import titlePlugin from '../src/utils/title.plugin'
 import Loader from '@/components/app/Loader'
 import Paginate from 'vuejs-paginate'
 import tooltipDirectives from '../src/directive/tooltip.directive'
@@ -20,7 +22,9 @@ import 'firebase/database'
 Vue.config.productionTip = false
 
 Vue.use(messagePlugin)
+Vue.use(titlePlugin)
 Vue.use(Vuelidate)
+Vue.use(VueMeta)
 Vue.filter('date', dateFilter)
 Vue.directive('tooltip', tooltipDirectives)
 Vue.filter('currency', currencyFilter)
